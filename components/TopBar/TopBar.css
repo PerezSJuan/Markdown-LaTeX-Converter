@@ -1,0 +1,114 @@
+.topBar {
+    width: 100%;
+    height: 60px;
+    background-color: var(--topbar-bg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.topBar h1 {
+    font-size: 24px;
+    color: var(--topbar-text);
+    margin: 0;
+    transition: color 0.3s ease;
+}
+
+.topLogo {
+    height: 40px;
+    width: auto;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.topBar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+}
+
+.topBar button {
+    background-color: transparent;
+    border: 2px solid transparent;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    color: var(--topbar-text);
+}
+
+.topBar button:hover {
+    background-color: var(--hover-bg);
+    transform: scale(1.05);
+}
+
+.darkModeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px !important;
+}
+
+.darkModeBtn svg {
+    color: var(--topbar-text);
+    transition: all 0.3s ease;
+}
+
+.darkModeBtn:hover svg {
+    transform: rotate(15deg);
+}
+
+.reloadLogo {
+    height: 20px;
+    width: adjust;
+    margin-top: 4px;
+    transition: all 0.3s ease;
+    filter: brightness(0) saturate(100%) invert(92%) sepia(7%) saturate(191%) hue-rotate(318deg) brightness(106%) contrast(96%);
+}
+
+[data-theme="dark"] .reloadLogo {
+    filter: brightness(0) saturate(100%) invert(88%) sepia(0%) saturate(2%) hue-rotate(21deg) brightness(107%) contrast(85%);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+    .topBar {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 10px;
+    }
+
+    .topLogo {
+        height: 28px;
+        margin: 0 8px 8px 8px;
+    }
+
+    .topBar h1 {
+        font-size: clamp(16px, 5vw, 20px);
+        flex: 1 1 100%;
+        text-align: center;
+        margin: 4px 0;
+    }
+
+    .topBar-buttons {
+        width: 100%;
+        justify-content: center;
+        gap: 8px;
+        margin-right: 0;
+    }
+
+    .topBar button {
+        padding: 8px 10px;
+    }
+
+    .reloadLogo {
+        height: 24px;
+    }
+}

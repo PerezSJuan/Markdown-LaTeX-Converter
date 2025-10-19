@@ -1,0 +1,191 @@
+.CollapsedConfig, .Collapse {
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    padding: 15px;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.CollapsedConfig:hover, .Collapse:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-1px);
+}
+
+.Config {
+    width: calc(100% - 20px);
+    box-sizing: border-box;
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+.ConfigTitle {
+    color: var(--text-color);
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.ConfigLabel {
+    display: inline-block;
+    min-width: 200px;
+    margin-right: 15px;
+    color: var(--text-color);
+    font-size: 16px;
+}
+
+/* Estilos para los contenedores de opciones */
+.TextWithChapters,
+.divideBigEquations,
+.imageRoutes,
+.spaceBetweenElements,
+.FileName,
+.Heading {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    border: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Estilos para el textarea */
+textarea {
+    width: 100%;
+    min-height: 150px;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+textarea:focus {
+    border-color: var(--button-bg);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--hover-bg);
+}
+
+/* Estilos para los inputs */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    width: 200px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--button-bg);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--hover-bg);
+}
+
+/* Estilos para el select */
+select {
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    cursor: pointer;
+    min-width: 120px;
+    transition: all 0.3s ease;
+}
+
+select:focus {
+    border-color: var(--button-bg);
+    outline: none;
+    box-shadow: 0 0 0 2px var(--hover-bg);
+}
+
+/* Hover states */
+.TextWithChapters:hover,
+.divideBigEquations:hover,
+.imageRoutes:hover,
+.spaceBetweenElements:hover {
+    background-color: #f5f5f5;
+}
+
+/* Transición suave para todos los elementos interactivos */
+input, select, button {
+    transition: all 0.3s ease;
+}
+
+.HeadingEditor {
+    width: 100%;
+    min-height: 50px; /* Ajusta este valor según tus necesidades */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    min-width: 300 px;
+    font-size: 14px;
+    font-family: inherit; /* Para que use la misma fuente que el resto de la app */
+    resize: both; /* Permite al usuario cambiar el tamaño verticalmente */
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+    .CollapsedConfig, .Collapse {
+        padding: 12px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .Config {
+        padding: 12px;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+
+    .ConfigLabel {
+        display: block;
+        margin-bottom: 6px;
+        min-width: 0;
+    }
+
+    .TextWithChapters,
+    .divideBigEquations,
+    .imageRoutes,
+    .spaceBetweenElements,
+    .FileName,
+    .Heading {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    input[type="text"],
+    select,
+    textarea {
+        width: 100%;
+    }
+}

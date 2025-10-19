@@ -1,0 +1,62 @@
+.ConvertButtonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.ConvertButton, .ConvertingButton, .DownloadButton {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    text-align: center;
+}
+
+/* Estilo del botón principal */
+.ConvertButton {
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.ConvertButton:hover {
+    background-color: var(--hover-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.ConvertButton:disabled {
+    background-color: var(--border-color);
+    color: var(--text-color);
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Estilo del botón de descarga */
+.DownloadButton {
+    background-color: #4CAF50; /* Un verde para indicar éxito */
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.DownloadButton:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+/* Responsive - Mobile */
+@media (max-width: 600px) {
+    .ConvertButtonContainer {
+        padding: 12px;
+    }
+
+    .ConvertButton, .ConvertingButton, .DownloadButton {
+        width: 100%;
+        min-width: 0;
+    }
+}
