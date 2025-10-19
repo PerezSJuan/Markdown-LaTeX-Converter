@@ -4,6 +4,7 @@ import Config from "../components/ConversionConfig/Config";
 import Info from "../components/Info/Info";
 import ConvertButton from "../components/ConvertButton/Converter";
 import { LatexInfo, LatexInfoButton } from "../components/LatexInfo/LatexInfo";
+import Links from "../components/Links/Links";
 
 import "./App.css";
 
@@ -30,6 +31,7 @@ function App() {
         <TopBar />
         <LatexInfo />
         <LatexInfoButton showInfo={showInfo} setShowInfo={setShowInfo} />
+        <Links />
       </>
       ) : (
         <>
@@ -39,6 +41,7 @@ function App() {
           <Config config={config} setConfig={setConfig} />
           <ConvertButton docs={docs} config={config} />
           <LatexInfoButton showInfo={showInfo} setShowInfo={setShowInfo} />
+          <Links />
         </>
       )}
 
